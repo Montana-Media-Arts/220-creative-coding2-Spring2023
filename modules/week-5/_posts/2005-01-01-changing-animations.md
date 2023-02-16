@@ -201,6 +201,9 @@ However, for our assignment, you can just flip your images and create another an
 
 <a href="https://youtu.be/0SkGIlEUP6c" target="_blank">Creating an alternative to setInterval in a class</a>
 
+<a href="https://youtu.be/4XjxhMhA25o" target="_blank">Flipping Direction of an Animation</a>
+
+
 
 </div>
 </div>
