@@ -11,6 +11,7 @@ jotted: false
   <button class="tablinks" onclick="openTab(event, 'step1')">Step 1</button>
   <button class="tablinks" onclick="openTab(event, 'step2')">Step 2</button>
   <button class="tablinks" onclick="openTab(event, 'step3')">Step 3</button>
+  <button class="tablinks" onclick="openTab(event, 'Videos')">Videos</button>
   <button class="tablinks" onclick="openTab(event, 'ToDo')">To Do</button>
  
 </div>
@@ -22,6 +23,8 @@ Remember in the last section, we were able to make the idle appear, but what do 
 We can do the same thing, but read in a different file and then populate the run array.  What might this look like?
 
 We will still use the `imageclass.js` and we will create a new file for running.
+
+In addition, the video section will highlight some changes that can be made to an external class to make the images and animations appear and contain more of the functionality.
 
 </div>
 </div>
@@ -184,6 +187,24 @@ However, for our assignment, you can just flip your images and create another an
 
 </div>
 </div>
+
+<div id="Videos" class="tabcontent">
+<div class="tabhtml" markdown="1">
+
+<a href="https://youtu.be/u7GaK9wkksU" target="_blank">Creating multiple images using a class</a>
+
+<a href="https://youtu.be/m8okG4McpxI" target="_blank">Choosing different animations</a>
+
+<a href="https://youtu.be/qxKSWWPr5dQ" target="_blank">Switching between different animations</a>
+
+<a href="https://youtu.be/jSXMZSVjs88" target="_blank">Pass an array of strings into a class</a>
+
+<a href="https://youtu.be/0SkGIlEUP6c" target="_blank">Creating an alternative to setInterval in a class</a>
+
+
+</div>
+</div>
+
 <div id="ToDo" class="tabcontent">
 <div class="tabhtml" markdown="1">
 Try the code in the earlier tabs to see the final result. Feel free to change values.

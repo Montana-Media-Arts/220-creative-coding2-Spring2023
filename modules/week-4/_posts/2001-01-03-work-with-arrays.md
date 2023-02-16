@@ -14,6 +14,7 @@ jotted: true
   <button class="tablinks" onclick="openTab(event, 'Step4')">Step 4</button>
   <button class="tablinks" onclick="openTab(event, 'Step5')">Step 5</button>
   <button class="tablinks" onclick="openTab(event, 'Step6')">Step 6</button>
+  <button class="tablinks" onclick="openTab(event, 'Video')">Video</button>
   <button class="tablinks" onclick="openTab(event, 'ToDo')">To Do</button>
  
 </div>
@@ -21,6 +22,8 @@ jotted: true
 <div id="Overview" class="tabcontent" style="display:block"  >
 <div class="tabhtml" markdown="1">
 So, how are we going to work with them.  Let's start with a simple example of displaying shapes and then we will work with our dogs.
+
+
 
 </div>
 </div>
@@ -284,6 +287,16 @@ function draw()
 Now, what did I do?  I created 5 random circles of random colors and put them in random places. I used two for loops to create and then display the circles.
 
 In the next section change the 5 to some other number.  What happens?
+</div>
+</div>
+
+<div id="Video" class="tabcontent">
+<div class="tabhtml" markdown="1">
+Here's another example of an array of objects
+
+<p>
+<a href="https://youtu.be/m2BKG3TcVZY" target="_blank">Video on Classes</a>
+</p>
 </div>
 </div>
 

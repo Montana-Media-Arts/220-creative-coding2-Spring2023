@@ -41,3 +41,5 @@ But we need to know how to use a class.  So, let's go back to original example a
 Finally, we will take our class example and add the setInterval into it.
 
 <a href="https://github.com/Montana-Media-Arts/220_CreativeCoding2-Spring2023-Samples/blob/main/Week%204%20Animation%20Example%204.zip" target="_blank">Animation Example 4</a>
+
+<a href="https://youtu.be/5LIFoa-EeC4" target="_blank">Video on Animations</a>
