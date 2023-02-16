@@ -295,7 +295,7 @@ In the next section change the 5 to some other number.  What happens?
 Here's another example of an array of objects
 
 <p>
-<a href="https://youtu.be/m2BKG3TcVZY" target="_blank">Video on Classes</a>
+<a href="https://youtu.be/m2BKG3TcVZY" target="_blank">Video on Array of Objects</a>
 </p>
 </div>
 </div>
