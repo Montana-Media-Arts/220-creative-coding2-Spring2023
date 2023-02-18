@@ -6,4 +6,4 @@ jotted: false
 
 # Conclusions
 
-This week we continued on adding more to our game.
+This week we added sound, collision and additional external libraries into our projects.
