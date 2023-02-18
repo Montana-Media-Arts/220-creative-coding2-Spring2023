@@ -3,7 +3,7 @@ title: Week 7 Collision
 module: 7
 ---
 
-# p5.SoundFile <br />
+# p5.collide2d <br />
 
 
 <br />
