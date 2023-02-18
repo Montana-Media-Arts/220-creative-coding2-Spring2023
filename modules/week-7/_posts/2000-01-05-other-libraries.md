@@ -1,9 +1,9 @@
 ---
-title: Week 7 Sound
+title: Week 7 Other Libraries
 module: 7
 ---
 
-# p5.SoundFile <br />
+# Other libraries <br />
 
 
 <br />

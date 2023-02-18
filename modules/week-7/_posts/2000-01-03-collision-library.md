@@ -1,5 +1,5 @@
 ---
-title: Week 7 Collision
+title: Week 7 Collide2D library
 module: 7
 ---
 
