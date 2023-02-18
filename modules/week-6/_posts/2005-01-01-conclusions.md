@@ -6,4 +6,4 @@ jotted: false
 
 # Conclusions
 
-This week we continued on adding more to our game.
+This week we continued working on our game.
