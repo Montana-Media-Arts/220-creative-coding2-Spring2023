@@ -1,6 +1,6 @@
 ---
 title: Applying p5.play
-module: 7
+module: 8
 jotted: false
 ---
 
