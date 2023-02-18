@@ -11,11 +11,10 @@ module: 7
 
 <div class="tab">
   <button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button>
-  <button class="tablinks" onclick="openTab(event, 'BasicExample')">Basic Example</button>
-   <button class="tablinks" onclick="openTab(event, 'Looping')">Loop Example</button>
-    <button class="tablinks" onclick="openTab(event, 'Stopping')">Stop Example</button>
-     <button class="tablinks" onclick="openTab(event, 'Pausing')">Pause Example</button>
-      <button class="tablinks" onclick="openTab(event, 'Resources')">Resources</button>
+  <button class="tablinks" onclick="openTab(event, 'Step1')">Step 1</button>
+   <button class="tablinks" onclick="openTab(event, 'Step2')">Step 2</button>
+    <button class="tablinks" onclick="openTab(event, 'Step3')">Step 3</button>
+     <button class="tablinks" onclick="openTab(event, 'Step4')">Step 4</button>
   <button class="tablinks" onclick="openTab(event, 'ToDo')">To Do</button>
  
 </div>
