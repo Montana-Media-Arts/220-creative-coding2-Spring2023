@@ -13,7 +13,7 @@ module: 7
   <button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button>
   <button class="tablinks" onclick="openTab(event, 'Including')">Including the Library</button>
    <button class="tablinks" onclick="openTab(event, 'Collision')">Collision</button>
-   <button class="tablinks" onclick="openTab(event, 'Videos')">Video</button>
+   <button class="tablinks" onclick="openTab(event, 'Videos')">Videos</button>
   <button class="tablinks" onclick="openTab(event, 'ToDo')">To Do</button>
  
 </div>
