@@ -15,6 +15,7 @@ module: 7
    <button class="tablinks" onclick="openTab(event, 'Step2')">Step 2</button>
     <button class="tablinks" onclick="openTab(event, 'Step3')">Step 3</button>
      <button class="tablinks" onclick="openTab(event, 'Step4')">Step 4</button>
+     <button class="tablinks" onclick="openTab(event, 'Videos')">Videos</button>
   <button class="tablinks" onclick="openTab(event, 'ToDo')">To Do</button>
  
 </div>
@@ -164,6 +165,14 @@ function draw() {
 
 </div>
 </div>
+
+<div id="Videos" class="tabcontent">
+<div class="tabhtml" markdown="1">
+* <a href="https://youtu.be/4tyNBfWIlOc" target="_blank">Basic Collision with 2 rectangles</a>
+* <a href="https://youtu.be/iomlnNsHCkA" target="_blank">Collision with Animations</a>
+</div>
+</div>
+
 
 
 <div id="ToDo" class="tabcontent">

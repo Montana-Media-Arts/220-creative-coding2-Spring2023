@@ -13,6 +13,7 @@ module: 7
   <button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button>
   <button class="tablinks" onclick="openTab(event, 'Including')">Including the Library</button>
    <button class="tablinks" onclick="openTab(event, 'Collision')">Collision</button>
+   <button class="tablinks" onclick="openTab(event, 'Videos')">Video</button>
   <button class="tablinks" onclick="openTab(event, 'ToDo')">To Do</button>
  
 </div>
@@ -80,7 +81,13 @@ function draw() {
 </div>
 
 
+<div id="Videos" class="tabcontent">
+<div class="tabhtml" markdown="1">
 
+* <a href="https://youtu.be/9WVone3FOFU" target="_blank">Basic Collision with a library</a>
+* <a href="https://youtu.be/KwYiESraSx4" target="_blank">Library Collision with Animations</a>
+</div>
+</div>
 
 
 <div id="ToDo" class="tabcontent">
