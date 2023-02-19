@@ -70,7 +70,7 @@ function draw() {
   r1.draw();
   r2.draw();
   
-  text(isRectanglesColliding(r1.getX(), r1.getY(), r1.getW(), r1.getH(),r2.getX(), r2.getY(), r2.getW(), r2.getH()), 300,300);
+  text(collideRectRect(r1.getX(), r1.getY(), r1.getW(), r1.getH(),r2.getX(), r2.getY(), r2.getW(), r2.getH()), 300,300);
  
 }
 
