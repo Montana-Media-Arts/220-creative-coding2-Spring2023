@@ -8,6 +8,9 @@ jotted: false
 
 So, what might an example look like and how do we break it down.
 
+
+
+
 One simple example might be like this.
 
 ```js
