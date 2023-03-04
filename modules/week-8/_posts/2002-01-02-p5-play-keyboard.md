@@ -6,139 +6,172 @@ jotted: false
 
 # Using the keyboard in p5.play
 
-So, in order to make an animation change, we have to create two different animations and then move along the x or y axis just like before.  So, let's add onto what we started with.
+So, in order to make an animation change, we have to create two different animations and then move along the x or y axis just like before.  So, let's add onto what we started with.  We also need to update the **animationImage** class and its constructor.
+
+The new animationImage class constructor should look like this. Notice the fileNames is no longer present.  Where did it go?
+
+```js
+ constructor( x, y, w, h)
+    {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.imageObjects = [];
+        this.currentAnimation;
+        this.createAnimation(); // new function
+        this.i = 0;
+        this.currentFrameCount = 0;
+        this.direction  = "";      
+    }
+
+```
+
+We must create a new function to create an animation and then load the different animation types.
+The createSprite function the p5play library allows us to have different animation types (i.e. idle and walk)
 
 ```js
 
-var cowGirlObjects
-var result;
-function preload() {
-  result = loadStrings('assets/characteridle.txt');
-}
-
-function setup() {
-    createCanvas(800,600);  
-    cowGirlObjects = loadAnimation(result[0], result[result.length-1]);
-}
-
-// display all the frames using the draw function as a loop
-function draw() 
+createAnimation()
 {
-    background(120);
-    animation(cowGirlObjects, 300, 250);
+    this.currentAnimation = createSprite(300, 250);
 }
 
 ```
 
-In order to add a run animation, we have to make a few modifications.  We are going to create a sprite with two different states.  Then, we can change states when the keys are pressed.  It looks like this now.
+```js
+
+loadAnimation(animationType,fileNames)
+{ 
+    this.currentAnimation.addAnimation(animationType,fileNames[0], fileNames[fileNames.length-1]);
+       
+}
+
+```
+This function allows us to set different animation types for the sprite. 
+
+And the drawAnimation function calls the displays the different animation depending on the animation type sent to the function.
 
 ```js
-var cowGirlObjects;
-var result, runresult;
+
+drawAnimation(animationType)
+{  
+   this.currentAnimation.frameDelay = 5; 
+   this.currentAnimation.changeAnimation(animationType);         
+}
+
+```
+
+So, how do we call the different animation types? In the main sketch, we can call all these functions in the class like this.
+
+```js
+
+var idlePaths = [];
+var myAnimation;
+var myWalkAnimation;
+var walkPaths = [];
+
 function preload() {
-  result = loadStrings('assets/characteridle.txt');
-  runresult = loadStrings('assets/characterrun.txt');
+   idlePaths = loadStrings("./images/idle/idle.txt");
+   walkPaths = loadStrings("./images/walk/walk.txt");
 }
 
 function setup() {
-    createCanvas(800,600);  
-    cowGirlObjects = createSprite(300, 250);
-    cowGirlObjects.addAnimation('idle', result[0], result[result.length-1]);
-    cowGirlObjects.addAnimation('run', runresult[0], runresult[runresult.length-1]);
+  createCanvas(800,600);
+  myAnimation = new animationImage( 0, 0, 150, 150);
+  myAnimation.loadAnimation('idle', idlePaths);
+  myAnimation.loadAnimation('walk', walkPaths);
+
+
 }
 
 // display all the frames using the draw function as a loop
 function draw() 
 {
+
     background(120);
-   
-    if(keyDown('d'))
+    if(keyIsPressed)
     {
-      cowGirlObjects.changeAnimation('run');
+        if(key == 'd')
+        {
+            myAnimation.drawAnimation('walk');
+        }
+        else
+        {
+            myAnimation.drawAnimation('idle');
+        }
     }
     else
     {
-      cowGirlObjects.changeAnimation('idle');
-    }
-
-    drawSprites();
+        myAnimation.drawAnimation('idle');
+    }   
 }
+
 ```
 
-Now, how do we make it move while we run?  We can just change the velocity of the x-coordinate.  However, what happens when we do that?
+<a href="https://github.com/Montana-Media-Arts/220_CreativeCoding2-Spring2023-Samples/blob/main/Week%208/Change%20Animations%20example.zip" target="_blank"> Example</a>
 
-```js
-var cowGirlObjects;
-var result, runresult;
-function preload() {
-  result = loadStrings('assets/characteridle.txt');
-  runresult = loadStrings('assets/characterrun.txt');
-}
-
-function setup() {
-    createCanvas(800,600);  
-    cowGirlObjects = createSprite(300, 250);
-    cowGirlObjects.addAnimation('idle', result[0], result[result.length-1]);
-    cowGirlObjects.addAnimation('run', runresult[0], runresult[runresult.length-1]);
-}
-
-// display all the frames using the draw function as a loop
-function draw() 
-{
-    background(120);
-   
-    if(keyDown('d'))
-    {
-      cowGirlObjects.changeAnimation('run');
-      cowGirlObjects.velocity.x += .5;
-    }
-    else
-    {
-      cowGirlObjects.changeAnimation('idle');
-    }
-
-    drawSprites();
-}
-```
-
-In this scenario, the velocity just continues even when we release the key.  Wow, it can really fast. Just change the .5.  So, how can we make it stop?
+Now, how do we make it move while we walk?  First, we let's use the p5play keyboard events.
 
 ```js
 
-var cowGirlObjects;
-var result, runresult;
-function preload() {
-  result = loadStrings('assets/characteridle.txt');
-  runresult = loadStrings('assets/characterrun.txt');
-}
-
-function setup() {
-    createCanvas(800,600);  
-    cowGirlObjects = createSprite(300, 250);
-    cowGirlObjects.addAnimation('idle', result[0], result[result.length-1]);
-    cowGirlObjects.addAnimation('run', runresult[0], runresult[runresult.length-1]);
-}
-
-// display all the frames using the draw function as a loop
-function draw() 
+ function draw() 
 {
+
     background(120);
    
-    if(keyDown('d'))
-    {
-      cowGirlObjects.changeAnimation('run');
-      cowGirlObjects.velocity.x += .5;
-    }
-    else
-    {
-      cowGirlObjects.changeAnimation('idle');
-      cowGirlObjects.velocity.x = 0;
-    }
-
-    drawSprites();
+        if(kb.pressing('d'))
+        {
+            myAnimation.updatePosition('forward');
+            myAnimation.drawAnimation('walk');
+            
+        }
+        else if(kb.pressing('a'))
+        {
+            myAnimation.updatePosition('reverse');
+            myAnimation.drawAnimation('walk');
+            
+        }
+        else
+        {
+            myAnimation.drawAnimation('idle');
+        }   
 }
 
 ```
+
+Then, let's update our animationImage one more time to account for movement.
+
+```js
+
+drawAnimation(animationType) {
+        
+        this.currentAnimation.frameDelay = 5;
+        this.currentAnimation.scale = .5;
+        this.currentAnimation.changeAnimation(animationType);
+        if (animationType == 'walk' && this.direction == 'forward') {
+            this.currentAnimation.direction = 0;
+            this.currentAnimation.mirror.x = false;
+            this.currentAnimation.speed = 1;
+
+        }
+        else if (animationType == 'walk' && this.direction == 'reverse') {
+
+            this.currentAnimation.mirror.x = true;
+            this.currentAnimation.direction = 180;
+            this.currentAnimation.speed = 1;
+
+        }
+        else {
+            this.currentAnimation.velocity.x = 0;
+        }
+
+
+    }
+
+```
+
+<a href="https://github.com/Montana-Media-Arts/220_CreativeCoding2-Spring2023-Samples/blob/main/Week%208/Change%20Direction%20example.zip" target="_blank">Example</a>
 
 We set the velocity back to 0.  Whew. that's better!  What about collisions?
 
