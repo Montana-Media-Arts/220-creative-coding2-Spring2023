@@ -6,6 +6,8 @@ jotted: false
 
 # Example
 
+<a href="https://youtu.be/j-2AMwfO6fs" target="_blank">Video</a>
+
 So, what might an example look like and how do we break it down.
 
 ```html

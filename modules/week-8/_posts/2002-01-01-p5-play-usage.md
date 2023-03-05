@@ -6,6 +6,8 @@ jotted: false
 
 # Applying p5.play
 
+<a href="https://youtu.be/PHpPk5Fz2FI" target="_blank">Video</a>
+
 So, let's look at what we did.
 
 ```js

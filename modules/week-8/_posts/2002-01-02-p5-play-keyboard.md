@@ -6,6 +6,8 @@ jotted: false
 
 # Using the keyboard in p5.play
 
+<a href="https://youtu.be/tHpKdgUMm3U" target="_blank">Video</a>
+
 So, in order to make an animation change, we have to create two different animations and then move along the x or y axis just like before.  So, let's add onto what we started with.  We also need to update the **animationImage** class and its constructor.
 
 The new animationImage class constructor should look like this. Notice the fileNames is no longer present.  Where did it go?
@@ -110,6 +112,9 @@ function draw()
 ```
 
 <a href="https://github.com/Montana-Media-Arts/220_CreativeCoding2-Spring2023-Samples/blob/main/Week%208/Change%20Animations%20example.zip" target="_blank"> Example</a>
+
+
+<a href="https://youtu.be/61hEdXTZHWo" target="_blank">Video</a>
 
 Now, how do we make it move while we walk?  First, we let's use the p5play keyboard events.
 

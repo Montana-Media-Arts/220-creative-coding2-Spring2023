@@ -6,6 +6,8 @@ jotted: false
 
 # Collisions in p5.play
 
+<a href="https://youtu.be/qRK9e1fq634" target="_blank">Video</a>
+
 So, how do we deal with collisions?  In  p5.play, they have a built-in collision function.
 
 First, let's add a new image.
