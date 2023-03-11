@@ -95,19 +95,17 @@ for (let i = 0; i < 5; i++) {
 Finally, we can call this function in our collision section.
 
 ```js
-else if(keyDown('x'))
-    {
-      cowGirlObjects.changeAnimation('attack');
-     
-      if(rock != null)
-      {
-        if(dist(cowGirlObjects.position.x,cowGirlObjects.position.y,rock.position.x,rock.position.y) < 250)
-        {
-          createParticles(rock.position.x, rock.position.y);
-          rock.remove();
-          rock = null;
+else if (kb.pressing('x')) {
+        myAnimation.drawAnimation('attack');
+        if (catImage != null) {
+            if (dist(myAnimation.getCurrentAnimation().position.x, myAnimation.getCurrentAnimation().position.y, catImage.position.x, catImage.position.y) < 200) {
+                createParticles(catImage.position.x, catImage.position.y);
+                catImage.remove();
+                catImage = null;
+               
+            }
+
         }
-      }
     }
 ```
 
