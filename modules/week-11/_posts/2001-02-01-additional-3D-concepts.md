@@ -198,7 +198,8 @@ The webgl version of the text() method works very similarly to the 2d version. H
 
 You can only use use opentype/truetype fonts loaded in your preload() function using the loadFont() method. You must either place those font files in a location accessible from your sketch, or use a CORS-compatible webl URL.
 stroke() is not currently supported.
-Advantages:
+
+**Advantages:**
 
 The fidelity of the rendered text should be better, especially when zooming & tilting.
 The performance may be better, especially if the text changes regularly and you are unable to cache the offscreen image used in the previous method.
@@ -207,14 +208,19 @@ Here is an example of loading an opentype font and using it to draw text with th
 ```js
 let myFont;
 function preload() {
-  myFont = loadFont('assets/AvenirNextLTPro-Demi.otf');
+  myFont = loadFont('assets/Avenir.otf');
 }
-
-function setup() {
+function setup(){
+  createCanvas(500, 500, WEBGL);
+}
+function draw(){
+  background(255);
+  rotateX(frameCount *0.01);
+  rotateY(frameCount * 0.02);
   fill('#ED225D');
   textFont(myFont);
   textSize(36);
-  text('p5*js', 10, 50);
+  text("Let's go!", 10, 50);
 }
 ```
 
@@ -230,7 +236,7 @@ The last big inclusion in WEBGL mode is lights. Lighting is a simple but powerfu
 
 * ambientLight();
 * directionalLight();
-*pointLight();
+* pointLight();
 
 ```js
 ambientLight(255,0,0); //even red light across our objects
