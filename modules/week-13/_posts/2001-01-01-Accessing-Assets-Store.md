@@ -1,6 +1,6 @@
 ---
 title: Accessing the Assets Store
-module: 12
+module: 13
 jotted: false
 ---
 
